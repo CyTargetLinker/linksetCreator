@@ -1,0 +1,6 @@
+/bin/
+databases/
+.class
+derby.log
+.settings/
+resources/
