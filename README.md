@@ -1,16 +1,16 @@
-# RegIN-Creator
-Scripts to create and update RegIN files used by CyTargetLinker
+# LinkSet-Creator
+Scripts to create and update LinkSet network files used by CyTargetLinker
 
 =============
 
-This program allows you to create a RegIN file that can be used with CyTargetLinker from a tab-delimited file containing attributes for the source and target node as well as attributes for the edges.
+This program allows you to create a LinkSet network file that can be used with CyTargetLinker from a tab-delimited file containing attributes for the source and target node as well as attributes for the edges.
 
 =============
 
 How to run the script with your own tab-delimited text file?
 
-1. Download the latest release from https://github.com/CyTargetLinker/RegIN-Creator/blob/master/releases/. You will need the jar file and the dependencies zip file which contains a lib directory with all dependencies. Unzip the dependencies.zip and make sure the lib directory is in the same directory as the jar file, so it can find all dependencies.
-2. Create a config file like the template here: https://github.com/CyTargetLinker/RegIN-Creator/blob/master/template.config. You can check out an example file for the miRTarBase database here: https://github.com/CyTargetLinker/RegIN-Creator/blob/master/mirtarbase_hsa.config.
+1. Download the latest release from https://github.com/CyTargetLinker/linksetCreator/blob/master/releases/. You will need the jar file and the dependencies zip file which contains a lib directory with all dependencies. Unzip the dependencies.zip and make sure the lib directory is in the same directory as the jar file, so it can find all dependencies.
+2. Create a config file like the template here: https://github.com/CyTargetLinker/linksetCreator/blob/master/template.config. You can check out an example file for the miRTarBase database here: https://github.com/CyTargetLinker/linksetCreator/blob/master/mirtarbase_hsa.config.
  * name = database name (required)
  * organism = species (optional)
  * version = database version (optional)
@@ -33,6 +33,6 @@ How to run the script with your own tab-delimited text file?
           
           
 3. Run the converter file with the input file (tab delimited text file containing the interaction data), the config file (as described in point 2) and an output file (e.g. output.xgmml).
- * java -jar -Dfile.encoding=UTF-8 RegIN-Creator-vx.x.jar -i input.txt -o output.xgmml -c file.config
+ * java -jar -Dfile.encoding=UTF-8 linksetCreator-vx.x.jar -i input.txt -o output.xgmml -c file.config
  
 
