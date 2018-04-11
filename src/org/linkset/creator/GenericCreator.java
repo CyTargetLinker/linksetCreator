@@ -121,7 +121,8 @@ public class GenericCreator {
 			setUpIdMappers();
 			
 			BufferedReader reader = new BufferedReader(new FileReader(input));
-			
+			System.out.println(attr.getTargetIdColumn());
+			System.out.println(attr.getTargetLabelColumn());
 			header = reader.readLine().split("\t");
 			
 			String line = null;
@@ -318,7 +319,7 @@ public class GenericCreator {
 	private void setNetworkAttributes(File input) {
 		graph.setTitle(networkName);
 		graph.setAttribute("Source File", input.getName());
-		graph.setAttribute("RegIN Name", networkName);
+		graph.setAttribute("LinkSet Name", networkName);
 		if(attr.getLicense() != null) {
 			graph.setAttribute("License", attr.getLicense());
 		}

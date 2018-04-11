@@ -50,9 +50,9 @@ public class ConfigFileReader {
 					} else if (split[0].equals(ConfigAttributes.SOURCE_COLUMNS)) { 
 						attributes.setSourceColumns(split[1]);
 					} else if (split[0].equals(ConfigAttributes.SOURCE_ID_COLUMN)) { 
-						attributes.setSourceLabelColumn(split[1]);
-					} else if (split[0].equals(ConfigAttributes.SOURCE_LABEL_COLUMN)) { 
 						attributes.setSourceIdColumn(split[1]);
+					} else if (split[0].equals(ConfigAttributes.SOURCE_LABEL_COLUMN)) { 
+						attributes.setSourceLabelColumn(split[1]);
 					} else if (split[0].equals(ConfigAttributes.SOURCE_SYSCODE_IN)) { 
 						attributes.setSourceSyscodeIn(split[1]);
 					} else if (split[0].equals(ConfigAttributes.SOURCE_SYSCODES_OUT)) { 
