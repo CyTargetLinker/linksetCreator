@@ -1,4 +1,19 @@
-package org.regin.creator;
+//	Copyright 2015-2018 CyTargetLinker LinkSetCreator
+//	Department of Bioinformatics - BiGCaT (Maastricht University)
+//
+//	Licensed under the Apache License, Version 2.0 (the "License");
+//	you may not use this file except in compliance with the License.
+//	You may obtain a copy of the License at
+//
+//		http://www.apache.org/licenses/LICENSE-2.0
+//
+//	Unless required by applicable law or agreed to in writing, software
+//	distributed under the License is distributed on an "AS IS" BASIS,
+//	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+//	See the License for the specific language governing permissions and
+//	limitations under the License.
+
+package org.linkset.creator;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -15,18 +30,23 @@ import org.bridgedb.DataSource;
 import org.bridgedb.IDMapper;
 import org.bridgedb.IDMapperException;
 import org.bridgedb.Xref;
-import org.regin.creator.graph.Graph;
-import org.regin.creator.graph.Graph.Edge;
-import org.regin.creator.graph.Graph.Node;
-import org.regin.creator.utils.ArgsParser;
-import org.regin.creator.utils.ArgsParser.AFilesIn;
-import org.regin.creator.utils.ArgsParser.AFilesOut;
-import org.regin.creator.utils.ArgsParser.AHelp;
-import org.regin.creator.utils.ArgsParser.GraphBuilder;
-import org.regin.creator.utils.ConfigAttributes;
-import org.regin.creator.utils.ConfigFileReader;
-import org.regin.creator.utils.Utils;
+import org.linkset.creator.graph.Graph;
+import org.linkset.creator.graph.Graph.Edge;
+import org.linkset.creator.graph.Graph.Node;
+import org.linkset.creator.utils.ArgsParser;
+import org.linkset.creator.utils.ConfigAttributes;
+import org.linkset.creator.utils.ConfigFileReader;
+import org.linkset.creator.utils.Utils;
+import org.linkset.creator.utils.ArgsParser.AFilesIn;
+import org.linkset.creator.utils.ArgsParser.AFilesOut;
+import org.linkset.creator.utils.ArgsParser.AHelp;
+import org.linkset.creator.utils.ArgsParser.GraphBuilder;
 
+/**
+ * 
+ * @author mkutmon
+ *
+ */
 public class GenericCreator {
 	private final static Logger log = Logger.getLogger(GenericCreator.class.getName());
 	static Args pargs;
@@ -64,7 +84,6 @@ public class GenericCreator {
 
 	public void startConversion(Args pargs) throws Exception {
 		if(pargs.isInput() && pargs.isConfig() && pargs.isOutput()) {
-			System.out.println(pargs.getInput());
 			File in = pargs.getInput();
 			File config = pargs.getConfig();
 			if(in.exists() && config.exists()) {				
