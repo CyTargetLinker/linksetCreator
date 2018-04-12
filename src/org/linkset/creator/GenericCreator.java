@@ -18,7 +18,10 @@ package org.linkset.creator;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -121,8 +124,6 @@ public class GenericCreator {
 			setUpIdMappers();
 			
 			BufferedReader reader = new BufferedReader(new FileReader(input));
-			System.out.println(attr.getTargetIdColumn());
-			System.out.println(attr.getTargetLabelColumn());
 			header = reader.readLine().split("\t");
 			
 			String line = null;
@@ -212,7 +213,7 @@ public class GenericCreator {
 					identifiers = identifiers + "]";
 					
 					node.setAttribute("identifiers", identifiers);
-					node.setAttribute("biologicalType", attr.getTargetType());
+					node.setAttribute("type", attr.getTargetType());
 					Integer columnLabel = attr.getTargetLabelColumn();
 					if(columnLabel != null) {
 						node.setAttribute("label", row[columnLabel]);
@@ -300,7 +301,7 @@ public class GenericCreator {
 					identifiers = identifiers + "]";
 					
 					node.setAttribute("identifiers", identifiers);
-					node.setAttribute("biologicalType", attr.getSourceType());
+					node.setAttribute("type", attr.getSourceType());
 					Integer columnLabel = attr.getSourceLabelColumn();
 					if(columnLabel != null) {
 						node.setAttribute("label", row[columnLabel]);
@@ -323,6 +324,9 @@ public class GenericCreator {
 		if(attr.getLicense() != null) {
 			graph.setAttribute("License", attr.getLicense());
 		}
+		Date d = new Date();
+		DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd"); 
+		graph.setAttribute("Creation Date", dateFormat.format(d));
 	}
 
 	private void setUpIdMappers() {
