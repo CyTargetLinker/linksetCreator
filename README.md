@@ -9,7 +9,7 @@ This program allows you to create a LinkSet network file that can be used with C
 
 How to run the script with your own tab-delimited text file?
 
-1. Download the latest release from https://github.com/CyTargetLinker/linksetCreator/blob/master/releases/. You will need the jar file and the dependencies zip file which contains a lib directory with all dependencies. Unzip the dependencies.zip and make sure the lib directory is in the same directory as the jar file, so it can find all dependencies.
+1. Download the latest release from https://github.com/CyTargetLinker/linksetCreator/releases. Download the jar file (e.g. linkset-creator-v2.0.jar)
 2. Create a config file like the template here: https://github.com/CyTargetLinker/linksetCreator/blob/master/template.config. You can check out an example file for the miRTarBase database here: https://github.com/CyTargetLinker/linksetCreator/blob/master/mirtarbase_hsa.config.
  * name = database name (required)
  * organism = species (optional)
@@ -33,6 +33,6 @@ How to run the script with your own tab-delimited text file?
           
           
 3. Run the converter file with the input file (tab delimited text file containing the interaction data), the config file (as described in point 2) and an output file (e.g. output.xgmml).
- * java -jar -Dfile.encoding=UTF-8 linksetCreator-vx.x.jar -i input.txt -o output.xgmml -c file.config
+ * java -jar -Dfile.encoding=UTF-8 linkset-creator-vx.x.jar -i input.txt -o output.xgmml -c file.config
  
 
