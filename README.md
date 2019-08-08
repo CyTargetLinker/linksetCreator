@@ -1,9 +1,9 @@
-# LinkSet-Creator
-Scripts to create and update LinkSet network files used by CyTargetLinker
+# Linkset-Creator
+Scripts to create and update Linkset network files used by CyTargetLinker
 
 =============
 
-This program allows you to create a LinkSet network file that can be used with CyTargetLinker from a tab-delimited file containing attributes for the source and target node as well as attributes for the edges.
+This program allows you to create a Linkset network file that can be used with CyTargetLinker from a tab-delimited file containing attributes for the source and target node as well as attributes for the edges.
 
 =============
 
