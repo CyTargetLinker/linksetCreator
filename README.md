@@ -7,6 +7,8 @@ This program allows you to create a Linkset network file that can be used with C
 
 =============
 
+## How to run
+
 How to run the script with your own tab-delimited text file?
 
 1. Download the latest release from https://github.com/CyTargetLinker/linksetCreator/releases. Download the jar file (e.g. linkset-creator-v2.0.jar)
@@ -33,6 +35,13 @@ How to run the script with your own tab-delimited text file?
           
           
 3. Run the converter file with the input file (tab delimited text file containing the interaction data), the config file (as described in point 2) and an output file (e.g. output.xgmml).
- * java -jar -Dfile.encoding=UTF-8 linkset-creator-vx.x.jar -i input.txt -o output.xgmml -c file.config
- 
 
+```shell
+java -jar -Dfile.encoding=UTF-8 target/linkset-creator-vx.x.jar -i input.txt -o output.xgmml -c file.config
+```
+
+## How to compile
+
+```shell
+mvn clean install
+```

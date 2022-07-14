@@ -24,7 +24,6 @@ import java.util.logging.SimpleFormatter;
 import org.bridgedb.BridgeDb;
 import org.bridgedb.IDMapper;
 import org.bridgedb.IDMapperException;
-import org.bridgedb.bio.DataSourceTxt;
 
 /**
  * 
@@ -42,7 +41,6 @@ public class Utils {
 	}
 
 	public static IDMapper initIDMapper(File file, boolean transitive) {
-		DataSourceTxt.init();
 		try {
 			Class.forName("org.bridgedb.rdb.IDMapperRdb");
 		} catch (ClassNotFoundException ex) {

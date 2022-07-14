@@ -33,6 +33,7 @@ import org.bridgedb.DataSource;
 import org.bridgedb.IDMapper;
 import org.bridgedb.IDMapperException;
 import org.bridgedb.Xref;
+import org.bridgedb.bio.DataSourceTxt;
 import org.linkset.creator.graph.Graph;
 import org.linkset.creator.graph.Graph.Edge;
 import org.linkset.creator.graph.Graph.Node;
@@ -62,6 +63,8 @@ public class GenericCreator {
 	 * -c = config file
 	 */
 	public static void main(String argv[]) throws Exception {
+                DataSourceTxt.init();
+                Class.forName("org.apache.derby.jdbc.ClientDriver");
 		System.out.println("Start");
 		pargs = ArgsParser.parse(argv, Args.class);
 
