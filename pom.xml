@@ -7,6 +7,12 @@
     <name>Linkset-Creator</name>
     <version>0.0.1</version>
 
+    <properties>
+      <bridgedb.version>3.0.16</bridgedb.version>
+      <derby.version>10.15.2.0</derby.version>
+    </properties>
+
+
     <build>
         <plugins>
             <plugin>
@@ -72,12 +78,43 @@
         <dependency>
             <groupId>org.bridgedb</groupId>
             <artifactId>org.bridgedb.bio</artifactId>
-            <version>3.0.16</version>
+            <version>${bridgedb.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.bridgedb</groupId>
+            <artifactId>org.bridgedb.rdb</artifactId>
+            <version>${bridgedb.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>mysql</groupId>
+                    <artifactId>mysql-connector-java</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>uk.co.flamingpenguin.jewelcli</groupId>
             <artifactId>jewelcli</artifactId>
             <version>0.6</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.derby</groupId>
+            <artifactId>derby</artifactId>
+            <version>${derby.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.derby</groupId>
+            <artifactId>derbytools</artifactId>
+            <version>${derby.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.derby</groupId>
+            <artifactId>derbyshared</artifactId>
+            <version>${derby.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.derby</groupId>
+            <artifactId>derbyclient</artifactId>
+            <version>${derby.version}</version>
         </dependency>
     </dependencies>
 
