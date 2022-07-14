@@ -64,6 +64,7 @@ public class GenericCreator {
 	 */
 	public static void main(String argv[]) throws Exception {
                 DataSourceTxt.init();
+                Class.forName("org.apache.derby.jdbc.ClientDriver");
 		System.out.println("Start");
 		pargs = ArgsParser.parse(argv, Args.class);
 
