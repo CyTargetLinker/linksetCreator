@@ -4,3 +4,4 @@ databases/
 derby.log
 .settings/
 resources/
+target/
